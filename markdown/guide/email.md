@@ -46,98 +46,19 @@ with **Edit** and enter the new value.
 Each provider also needs its sender or sending domain verified in the provider's own account. Without that, the
 provider can refuse to send.
 
-You can add as many providers as you like. They are the types below.
+You can add as many providers as you like. Each has its own page with the steps to get its key and the values to enter:
 
-### SMTP
+- [Twilio SendGrid](/guide/providers/sendgrid/)
+- [Mailgun](/guide/providers/mailgun/)
+- [Postmark](/guide/providers/postmark/)
+- [Resend](/guide/providers/resend/)
+- [Brevo](/guide/providers/brevo/)
+- [SMTP2GO](/guide/providers/smtp2go/)
+- [ZeptoMail](/guide/providers/zeptomail/)
+- [SMTP](/guide/providers/smtp/), including Google Workspace, Microsoft 365 and your host's mail server
+- [WordPress (wp_mail)](/guide/providers/wp-mail/)
 
-Use SMTP for any service or server that takes mail over SMTP, such as a host's mail server, Amazon SES or
-ZeptoMail's SMTP service. SMTP2GO has its own provider type, below.
-
-Enter the **SMTP host**, the **Port** (587 for STARTTLS, 465 for SSL), the **Encryption** (**STARTTLS** or
-**SSL/TLS**), and the **Username** and **Password** if the server needs them. **Allow a local server** lets the host
-be a loopback or private address with a self-signed certificate, such as a relay on your own network. It applies to
-that provider only.
-
-**Test connection** connects, logs in and disconnects. It sends no email. An SMTP provider reports "Sent" and never
-reports delivery.
-
-### Brevo
-
-1. In Brevo, create an API key. Enter it as the **API key**.
-2. Verify your sender or domain in Brevo.
-3. For delivery events, add a webhook in Brevo with the URL from AccessBay (see "Webhooks"). Set its bearer
-   authentication to a token you choose, and enter the same token as the **Webhook bearer token**.
-
-**Test connection** checks the key against your Brevo account. It sends no email.
-
-### Resend
-
-1. In Resend, create an API key. Enter it as the **API key**.
-2. Verify your sending domain in Resend.
-3. For delivery events, add a webhook in Resend with the URL from AccessBay. Copy its secret (it starts with
-   `whsec_`) into **Webhook signing secret**.
-
-**Test connection** checks the key. A key that can only send is accepted. It sends no email.
-
-### Postmark
-
-1. In Postmark, copy the server's API token. Enter it as the **Server API token**.
-2. Leave **Message stream** empty to use the default transactional stream, or enter the stream's name.
-3. Verify your sender or domain in Postmark.
-4. For delivery events, add a webhook in Postmark. Postmark checks webhooks with basic authentication, so put a user
-   name and password in the URL from AccessBay, and enter the same pair as **Webhook username** and **Webhook
-   password**.
-
-**Test connection** checks the token. It sends no email.
-
-### SMTP2GO
-
-1. In SMTP2GO, go to Sending > API Keys and create an API key with the **Emails** send permission. Enter it as the
-   **API key**.
-2. Leave **Region** on **Automatic** unless your SMTP2GO account is bound to a data region. The other choices are
-   United States, Europe and Australia.
-3. Verify your sender or domain in SMTP2GO. The **From address** must be a verified sender.
-4. For delivery events, add a webhook in SMTP2GO. SMTP2GO doesn't sign webhooks, so put a user name and password in
-   the URL from AccessBay (`https://user:password@host/...`), and enter the same pair as **Webhook username** and
-   **Webhook password**. Also tick the custom headers in the webhook settings, so events carry the message ID.
-
-AccessBay reports these events: delivered, hard bounce, soft bounce, spam, unsubscribe and reject.
-
-SMTP2GO has no way to check a key without sending. **Test connection** sends a test email to your own admin address.
-It proves the key, the region and the verified sender.
-
-### ZeptoMail (Zoho CPaaS)
-
-1. In ZeptoMail, create a mail agent and copy its Send Mail token. Enter it as the **Send Mail token**. The
-   "Zoho-enczapikey" prefix is optional.
-2. Leave **API host** empty to use `api.zeptomail.com`. If your account is in another region, enter that host, for
-   example `api.zeptomail.eu`.
-3. Verify your sending domain in ZeptoMail.
-4. For delivery events, add a webhook in ZeptoMail with the URL from AccessBay. Copy its secret key into **Webhook
-   signing key**.
-
-ZeptoMail has no way to check a token without sending. **Test connection** sends a test email to your own admin
-address. ZeptoMail doesn't report that an email was delivered.
-
-### Mailgun (API)
-
-1. In Mailgun, create an API key. Enter it as the **API key**.
-2. Enter the **Sending domain** you verified in Mailgun, for example `mg.example.com`.
-3. Choose the **Region** your account is in: US (`api.mailgun.net`) or EU (`api.eu.mailgun.net`).
-4. For delivery events, add an HTTP webhook in Mailgun with the URL from AccessBay. Copy the HTTP webhook signing
-   key (Mailgun > Sending > Webhooks) into **Webhook signing key**.
-
-**Test connection** checks the key and the sending domain. It sends no email.
-
-### SendGrid (API)
-
-1. In SendGrid, create an API key with the Mail Send permission. Enter it as the **API key**.
-2. Choose the **Region** your account is in: Global (`api.sendgrid.com`) or EU (`api.eu.sendgrid.com`).
-3. Verify your sender or domain in SendGrid.
-4. For delivery events, turn on the Event Webhook in SendGrid with the URL from AccessBay. Turn on signature
-   verification and copy its public key into **Webhook verification key**.
-
-**Test connection** checks that the key can send mail. It sends no email.
+[Email providers](/guide/providers/overview/) helps you choose one.
 
 ## Test a provider
 
@@ -160,9 +81,9 @@ complained about. Without it, the email stays at "Sent".
 
 For every provider that supports webhooks, the Email providers screen has a **Webhooks** card. It shows a **Webhook
 URL** for that provider with a copy button. Paste it into the provider's webhook settings, then enter the matching
-secret in AccessBay as described for each type above. AccessBay refuses a webhook that fails the check.
+secret in AccessBay as described on the provider's page. AccessBay refuses a webhook that fails the check.
 
-`wp_mail` and SMTP have no webhook.
+`wp_mail`, SMTP and ZeptoMail have no webhook.
 
 ## How failover, retries and alerts work
 

@@ -31,6 +31,26 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
   The licences AccessBay and its client SDK are released under, what they mean for plugins you build with the SDK, and how to get the source.
 - Plugin settings: https://docs.wpanchorbay.com/accessbay/guide/plugin-settings/
   Show AccessBay in the admin bar, choose whether deleting the plugin deletes its data, and erase all AccessBay data while keeping the plugin.
+- Brevo: https://docs.wpanchorbay.com/accessbay/guide/providers/brevo/
+  How to connect Brevo (formerly Sendinblue) to AccessBay - authenticate a domain, create an API key, fill in the form and set up delivery events.
+- Mailgun: https://docs.wpanchorbay.com/accessbay/guide/providers/mailgun/
+  How to connect Mailgun to AccessBay - add and verify a domain, get an API key, fill in the form and set up delivery events.
+- Email providers: https://docs.wpanchorbay.com/accessbay/guide/providers/overview/
+  Which email provider to choose for AccessBay, where the webhook URL is shown, how to test, and a setup page for each provider.
+- Postmark: https://docs.wpanchorbay.com/accessbay/guide/providers/postmark/
+  How to connect Postmark to AccessBay - confirm a sender, copy the server API token, fill in the form and set up delivery events.
+- Resend: https://docs.wpanchorbay.com/accessbay/guide/providers/resend/
+  How to connect Resend to AccessBay - verify a domain, create a sending-only API key, fill in the form and set up delivery events.
+- Twilio SendGrid: https://docs.wpanchorbay.com/accessbay/guide/providers/sendgrid/
+  How to connect Twilio SendGrid to AccessBay - verify a sender, create an API key, fill in the form and set up delivery events.
+- SMTP: https://docs.wpanchorbay.com/accessbay/guide/providers/smtp/
+  How to connect any SMTP server to AccessBay - Google Workspace and Gmail, Microsoft 365, or your host's mailbox.
+- SMTP2GO: https://docs.wpanchorbay.com/accessbay/guide/providers/smtp2go/
+  How to connect SMTP2GO to AccessBay - verify a sender, create an API key, fill in the form and set up delivery events.
+- WordPress (wp_mail): https://docs.wpanchorbay.com/accessbay/guide/providers/wp-mail/
+  How the WordPress mail provider works in AccessBay, and how to use it with WP Mail SMTP, FluentSMTP or a similar plugin.
+- ZeptoMail: https://docs.wpanchorbay.com/accessbay/guide/providers/zeptomail/
+  How to connect ZeptoMail (Zoho) to AccessBay - verify a domain, copy the Send Mail token and fill in the form. Delivery events are not available.
 - Requirements: https://docs.wpanchorbay.com/accessbay/guide/requirements/
   The WordPress, PHP and database versions AccessBay needs, and the PHP extensions it checks for.
 - The secret key: https://docs.wpanchorbay.com/accessbay/guide/secret-key/
