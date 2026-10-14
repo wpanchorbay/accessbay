@@ -45,7 +45,8 @@ Go to Settings > Email providers, select **Add provider** and pick **Resend**.
 
 - **The test fails with an authentication error.** The key is wrong or was deleted. Create a new one.
 - **Resend refuses the email.** The From address is on a domain that isn't verified yet. While a domain is not
-  verified, Resend may allow test emails only to your own address.
+  verified, Resend may allow test emails only to your own address. AccessBay treats this refusal as a setup problem
+  with the provider, not as a problem with the email, so verify the domain and test again.
 - **No delivery events arrive.** Check that the secret in AccessBay is the one from the same webhook.
 
 ## Vendor documentation

@@ -44,7 +44,8 @@ Go to Settings > Email providers, select **Add provider** and pick **Twilio Send
 
 1. In AccessBay, copy the **Webhook URL** from the **Webhooks** card.
 2. In SendGrid, go to Settings > Mail Settings > Webhook Settings > Event Webhooks and create a webhook with that URL.
-3. Tick the events: delivered, bounce, dropped, spam report and unsubscribe.
+3. Tick the events: delivered, bounce, dropped, spam report and unsubscribe. AccessBay counts a dropped event as a hard
+   bounce.
 4. Turn on **Enable Signed Event Webhook** and save.
 5. The key pair exists only after you save. Reopen the webhook (cog icon, then **Edit**) and copy the public
    verification key.

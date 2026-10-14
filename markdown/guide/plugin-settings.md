@@ -1,15 +1,63 @@
 ---
 title: "Plugin settings"
-description: "Show AccessBay in the admin bar, choose whether deleting the plugin deletes its data, and erase all AccessBay data while keeping the plugin."
+description: "How the Settings screen works, what every setting does, how to show AccessBay in the admin bar, and how to erase all AccessBay data."
 ---
-The Plugin section of AccessBay's settings holds the settings about the plugin itself rather than your store. Both
-settings are off until you turn them on.
+## The Settings screen
+
+Go to AccessBay > Settings. The screen has sections: **General**, **Email settings**, **Network**, **Logging**,
+**Licensing** and **Plugin**. API keys and Email providers have their own entries in the sidebar. To jump straight to a
+setting, [search for it](/guide/finding-things/#settings-in-the-results).
+
+- A setting that is on or off is a full-width row: its name and help text on the left and a switch on the right.
+  Select anywhere on the row to flip it.
+- Nothing changes until you select **Save changes**. AccessBay then shows "Settings saved".
+- If you leave the screen with unsaved changes, AccessBay asks "Leave without saving?".
+
+## All settings
+
+| Section | Setting | What it does |
+|---|---|---|
+| General | Mode | Test marks new orders and licences as test ones, so they stay apart from real ones. Live is for real customers. |
+| General | New order origin | Where new orders start: WooCommerce, AccessBay's own checkout, or both while you switch over. |
+| General | Archived products | Keep updates: customers with a valid licence keep downloads and updates after you archive a product, until their licence expires. Stop updates: archiving ends downloads and updates for everyone. Archiving always ends new sales. |
+| General | Event retention | How many days events are kept before they are deleted (1 to 3650). |
+| General | Queue warning | Minutes a queued job may wait before the background-jobs check warns (1 to 59). See [Health checks](/guide/health-checks/). |
+| General | Customer portal page | The ID of the page that shows the customer portal. 0 means none. |
+| General | Support email | The address customers see on the thank-you page and in the portal when they need help. Empty shows none. |
+| Email settings | Email record retention | Days to keep AccessBay emails, their attempts, provider events and the site mail log. 0 keeps everything (0 to 3650). |
+| Email settings | Email retry period | Days a failed email keeps being retried before it is given up (1 to 5). |
+| Email settings | Staging email allowlist | On a staging site, email goes only to these addresses and to site administrators. |
+| Email settings | Send a daily test email | Once a day, send a short test email through each mail provider. Off by default. |
+| Email settings | Daily test email recipient | Where the daily test email goes. Empty uses the site administrator address. |
+| Email settings | Mail problem alerts | Who is emailed when a mail provider stops working and again when it works, up to ten addresses. Empty uses the site administrator address. |
+| Network | Trusted proxies | Your own proxies, one IP address or CIDR range per line. Their forwarded client address is trusted. |
+| Network | Behind Cloudflare | Trust Cloudflare's forwarded client address. |
+| Logging | Request log retention | Days to keep request log rows (1 to 90). |
+| Logging | Request log size | The most rows the request log keeps, the oldest going first (1000 to 1,000,000). |
+| Licensing | Access deadline cap | The longest an access deadline may be set ahead, in days (1 to 365). |
+| Licensing | Licence key prefix | The letters every new licence key starts with. |
+| Licensing | Staging activations | The most staging sites a licence may keep active at once. 0 turns the allowance off (0 to 1000). |
+| Plugin | Delete data when the plugin is deleted | See below. |
+| Plugin | AccessBay in the admin bar | See below. |
+
+The [email setup](/guide/email/) page explains the email settings in context, and
+[Health checks](/guide/health-checks/) explains Queue warning.
+
+## The Plugin section
+
+The Plugin section holds the settings about the plugin itself rather than your store. Both settings are off until you
+turn them on.
 
 ## AccessBay in the admin bar
 
-Turn this on to add an AccessBay link, with the AccessBay icon, to the bar at the top of the WordPress admin.
-It opens the AccessBay home. It shows only to people who may open AccessBay, and only in the admin, not on your site's
-pages.
+Turn this on to add an AccessBay link, with the AccessBay icon, to the bar at the top of the WordPress admin. It opens
+the AccessBay home.
+
+- After you select **Save changes**, the link appears or disappears at once. You don't need to reload the page.
+- It shows only in the admin, never on your site's pages.
+- It shows only to people who may open AccessBay.
+- The icon takes its colours from the admin colour scheme the person chose in their WordPress profile, including the
+  hover colour, and it follows a browser's forced-colours mode.
 
 ## Delete data when the plugin is deleted
 

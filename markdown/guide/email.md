@@ -30,7 +30,11 @@ failing provider doesn't leave them stuck.
 
 1. Go to AccessBay > Settings > Email providers.
 2. Select **Add provider**.
-3. Pick the service you will send through, then select **Continue**.
+3. Pick the service you will send through, then select **Continue**. The services show as cards in two columns, each
+   with its logo. **WordPress (wp_mail)** comes first, across the full width. Its card says it hands mail to
+   WordPress's own mail function with no account needed. If another SMTP plugin, such as WP Mail SMTP, FluentSMTP or
+   Post SMTP, should send your site's mail, choose this one. The others are named for how AccessBay reaches them, for
+   example **Twilio SendGrid (API)**, **Mailgun (API)** and **SMTP2GO (API)**.
 4. Fill in the form. It has groups: **Sending identity** (**Name**, **From address**, **From name**; the last two are
    optional), **Connection**, **Credentials** and, for providers that report delivery, **Webhook**. **Back** returns
    to the list of services.
@@ -142,7 +146,7 @@ alerts under its send guard instead of emailing them.
 
 ## The email log
 
-Go to AccessBay > Email log. It has three tabs.
+Go to AccessBay > Email log. It has three tabs, **AccessBay email**, **All site email** and **Suppressions**.
 
 - **AccessBay email** lists every email AccessBay sends, with its status. Open one to see its **Attempts** (each
   provider tried, the result and how long it took) and its **Provider events** (delivered, bounced and so on). Use
@@ -154,6 +158,23 @@ Go to AccessBay > Email log. It has three tabs.
   hand. **Lift suppression** removes one.
 
 The logs keep recipients, subjects, times and results. They don't keep the body of any email.
+
+### Filtering the logs
+
+Each log has its own filters in one row above the table. Each filter button shows its choice, for example "Status:
+Failed, Bounced". A filter that allows several values opens a menu of checkboxes that stays open while you tick, and a
+row matches when it has any ticked value. **Clear filters** appears when any filter is set and puts them all back.
+
+- **AccessBay email:** **Status** (Queued, Held, Accepted, Suppressed, Failed, Cancelled, Bounced), **Delivery**
+  (Deferred, Delivered, Bounced, Complained) and **Provider** (one provider, or all). The table shows the recipient,
+  the template (with a "Possible duplicate" badge when it applies), the status, whether the provider reported
+  delivery, the provider and the number of attempts. Where a provider can't report delivery, the delivery column says
+  so, for example "Sent; delivery not reported by this provider".
+- **All site email:** a **Search recipients** box and a **Result** filter (Sent, Failed). The table shows the recipient,
+  subject, time, result and any error.
+
+Use **Load more** under the table to see older rows. These filters are not part of the page address and you can't
+save them as views, unlike the lists on other screens ([Finding things](/guide/finding-things/)).
 
 ### Retention
 

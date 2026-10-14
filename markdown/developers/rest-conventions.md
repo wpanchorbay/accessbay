@@ -89,3 +89,48 @@ proxy shares the proxy's address.
 
 Every answer, errors included, sends `Cache-Control: no-store, private` and `Vary: Cookie`, and no
 `Access-Control-*` headers: no AccessBay route is meant to be called from a browser on another site. JSONP is off.
+
+## Filtering list routes
+
+The admin screens that list things (products, orders, licences, activations, the email log and the site mail log)
+read their rows from list routes. These routes take a `POST` with a JSON body, like every admin route (see "Who may
+call a route" above). All body fields are optional.
+
+| Route | Filters that take several values | Other body fields |
+|---|---|---|
+| `/accessbay/v1/products/list` | `status`: `draft`, `active`, `archived` | `before_id`, `limit` |
+| `/accessbay/v1/orders/search` | `source`: `woocommerce`, `native`, `manual`, `api`; `payment_status`: `pending`, `paid`, `partially_refunded`, `refunded`, `charged_back`, `cancelled`; `fulfilment_status`: `unfulfilled`, `partially_fulfilled`, `fulfilled`, `partially_revoked`, `revoked`, `not_required` | `q` (up to 191 characters), `page`, `limit` |
+| `/accessbay/v1/licenses/search` | `status`: `unstarted`, `active`, `expired`, `void`, `suspended`, `revoked`; `mode`: `test`, `live`; `key_origin`: `generated`, `imported` | `product_id`, `customer_id`, `license_key`, `before_id`, `limit` |
+| `/accessbay/v1/activations/search` | `state`: `live`, `deactivated` | `staging` (true or false), `page`, `limit` |
+| `/accessbay/v1/admin/outbox/list` | `status`: `queued`, `held`, `accepted`, `suppressed`, `failed`, `cancelled`, `bounced`; `delivery`: `deferred`, `delivered`, `bounced`, `complained` | `provider_id`, `before_id`, `limit` |
+| `/accessbay/v1/admin/mail/site-log` | `result`: `sent`, `failed` | `recipient` (up to 190 characters), `before_id`, `limit` |
+
+`limit` is at most 100. The [API reference](/api/) has the full list of fields and answers for each route.
+
+Each filter in the first column accepts one value, a comma-separated string or an array:
+
+```json
+{ "status": "active,draft", "limit": 25 }
+```
+
+```json
+{ "status": ["active", "draft"], "limit": 25 }
+```
+
+Both bodies ask for products that are active or draft. The rules:
+
+- Values inside one filter are alternatives (OR). A row matches when it has any of them.
+- Different filters combine (AND). This body asks for orders that are paid or partly refunded, and also not yet
+  fulfilled:
+
+  ```json
+  {
+    "payment_status": ["paid", "partially_refunded"],
+    "fulfilment_status": "unfulfilled"
+  }
+  ```
+
+- A single value works as it always did. An empty string, an empty array or `null` means no filter.
+- Spaces around a value are removed and a repeated value counts once.
+- An unknown value answers `400 rest_invalid_param`, so a typo never turns into "no filter" silently.
+- A list longer than the number of allowed values is refused.

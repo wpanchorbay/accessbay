@@ -30,7 +30,7 @@ Go to Settings > Email providers, select **Add provider** and pick **SMTP2GO (AP
 | Region | **Automatic** unless your account is bound to a data region. Then pick United States, Europe or Australia to match it. |
 | Webhook username | A user name you choose. Leave empty if you skip webhooks. |
 | Webhook password | A password you choose. |
-| Webhook bearer token | Optional. Only needed if you want SMTP2GO to send a bearer header instead of a user name and password. Not every AccessBay version shows this field. |
+| Webhook bearer token | Optional. A long random value (32 characters or more) that SMTP2GO sends as an `Authorization: Bearer` header, instead of the user name and password. |
 
 SMTP2GO has no way to check a key without sending. **Test connection** sends one test email to your own admin address.
 That proves the key, the region and the verified sender.
@@ -38,7 +38,8 @@ That proves the key, the region and the verified sender.
 ## Delivery events (webhook)
 
 SMTP2GO doesn't sign webhooks. It can send a basic or bearer authorization header, or a user name and password in the
-URL.
+URL. AccessBay accepts either the user name and password pair or the bearer token, so you can use whichever SMTP2GO
+sends. The webhook URL is public, so make the password or token long and random.
 
 1. In AccessBay, copy the **Webhook URL** from the **Webhooks** card.
 2. Choose a user name and a password. Enter them in **Webhook username** and **Webhook password** and save.

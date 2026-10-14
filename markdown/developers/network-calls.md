@@ -6,7 +6,7 @@ description: "Every request AccessBay and the AccessBay SDK make over the networ
 nothing is sent to any server run by the people who built AccessBay. This page lists every HTTP request the code
 makes in this release, so you can check that for yourself and copy the list into your own privacy text.
 
-There are five kinds of request:
+There are six kinds of request:
 
 | Who sends it | Where it goes | Why |
 |---|---|---|
@@ -15,9 +15,10 @@ There are five kinds of request:
 | The AccessBay plugin | The same WordPress site it runs on | Health checks |
 | Action Scheduler, a library bundled in the AccessBay plugin | The same WordPress site it runs on | Start the background job runner |
 | The AccessBay plugin | `www.cloudflare.com`, only when an administrator runs a command | Refresh the list of Cloudflare's address ranges |
+| The AccessBay plugin | The email provider an administrator added under Settings, Email providers | Send email, check the provider's credentials, send test emails |
 
-Before the AccessBay plugin sends a health check or the Cloudflare request, it looks the host name up through your
-server's DNS resolver. Those names are the site's own name and `www.cloudflare.com`, and your resolver sees them.
+Before the AccessBay plugin sends a health check, an email provider request or the Cloudflare request, it looks the host name up through your
+server's DNS resolver. Those names are the site's own name, `www.cloudflare.com` and the provider hosts you chose, and your resolver sees them.
 
 The updater's requests are listed in their own section near the end.
 
@@ -101,10 +102,43 @@ administrator runs `wp accessbay proxies refresh`, it sends two `GET` requests: 
 Cloudflare sees the address of your server, as any web server would. AccessBay keeps the previous list if an answer is
 empty or malformed.
 
+## Email provider requests
+
+By default AccessBay sends its email through WordPress's own `wp_mail()` and makes no request of its own for it. The
+requests below happen only after an administrator adds a provider under AccessBay > Settings > Email providers
+([Email setup](/guide/email/)). Each goes to the host of that provider and nowhere else. The API providers are reached over HTTPS only.
+
+| Provider | Hosts |
+|---|---|
+| Brevo | `api.brevo.com` |
+| Resend | `api.resend.com` |
+| Postmark | `api.postmarkapp.com` |
+| SMTP2GO | `api.smtp2go.com`, or `us-api.smtp2go.com`, `eu-api.smtp2go.com`, `au-api.smtp2go.com` |
+| ZeptoMail | `cpaas.zoho.com` by default, or `cpaas.zoho.eu`, `api.zeptomail.com`, `api.zeptomail.eu` |
+| Mailgun | `api.mailgun.net`, or `api.eu.mailgun.net` |
+| Twilio SendGrid | `api.sendgrid.com`, or `api.eu.sendgrid.com` |
+| SMTP | The mail server host and port the administrator typed in |
+
+AccessBay makes these requests:
+
+- **Sending an email.** One request per attempt, when AccessBay sends an email through that provider. It carries the
+  recipient, sender, subject and body of that email, and the provider's key or login.
+- **Test connection.** A check of the key or login. ZeptoMail and SMTP2GO can't check without sending, so for them it
+  sends a short test email to the administrator's own address.
+- **Hourly credential check.** Once an hour for each enabled provider that can check its credentials without sending.
+  Providers that can't are judged from their real sends.
+- **Send test email.** One short email to an address the administrator types, through the provider they pick.
+- **Daily test email.** Only if the administrator turned on **Send a daily test email**. One short email through each
+  provider once a day.
+
+Webhooks come in, not out: a provider calls your site's webhook URL to report what happened to an email, and AccessBay
+sends nothing back. A provider's host only learns what an email carries and the address of your server.
+
 ## Not network calls of AccessBay
 
-- **Email.** AccessBay sends mail through WordPress's own `wp_mail()`, so whichever SMTP or mail service your site is
-  set up to use carries it. What that service receives is between your site and that service.
+- **Email through `wp_mail`.** The default provider, WordPress (`wp_mail`), hands the message to WordPress's own
+  `wp_mail()`, so whichever SMTP or mail service your site is set up to use carries it. What that service receives is
+  between your site and that service.
 - **WordPress itself.** Requests made by WordPress core or by other plugins, such as update checks for WordPress and
   for plugins hosted on WordPress.org, aren't made by AccessBay or the SDK.
 
@@ -147,6 +181,7 @@ always gets the newest stable release. A site on beta is also offered a stable r
 In this release, the SDK sends its requests from one file, `src/Http.php`: the licence calls and the package request
 through `wp_remote_post()`, the release information through `wp_remote_get()` and the package download through
 `wp_safe_remote_get()`. In the AccessBay plugin's own code, the one class that sends a request is
-`WpPinnedTransport`, behind `SafeHttpClient`. A search for `wp_remote_` and `wp_safe_remote_` in the SDK's `src/` folder and
+`WpPinnedTransport`, behind `SafeHttpClient`, and the email provider drivers use it. The SMTP provider connects to its
+mail server through PHPMailer instead. A search for `wp_remote_` and `wp_safe_remote_` in the SDK's `src/` folder and
 the plugin's `src/` folder finds those two places. The bundled job runner sends
 one more request. To find it, search `vendor-prefixed/woocommerce/action-scheduler` for `wp_remote_post`.

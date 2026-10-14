@@ -10,9 +10,9 @@ AccessBay is a pre-release. This page lists what the current release leaves out,
 - **Subscriptions.** Invoice and card renewals collected by AccessBay are planned as a Pro feature in a later release. Renewing a licence by paying again for it, through WooCommerce, is planned earlier.
 - **A WordPress.org listing.** We plan to list the free plugin on WordPress.org. It is not listed yet, so you install AccessBay from a zip.
 
-## Setting up products without admin screens
+## Setting up products from the command line
 
-The screens for managing products, prices and customers are not built yet. Until they are, WP-CLI creates them. Each command prints a table or, with `--format=json`, JSON; `--format=ids` prints only the new id, for scripts. A refused input exits with status 1 and prints the reason code, such as `duplicate_slug`. All of them work in every mode, live included.
+You normally manage products and prices on their admin screens ([Products](/guide/products/)). WP-CLI can create them too, which is handy for scripts and for seeding a test site. Each command prints a table or, with `--format=json`, JSON; `--format=ids` prints only the new id, for scripts. A refused input exits with status 1 and prints the reason code, such as `duplicate_slug`. All of them work in every mode, live included.
 
 | Command | What it does |
 | --- | --- |

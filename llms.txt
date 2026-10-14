@@ -17,20 +17,30 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
   The rules every AccessBay REST route follows, including authentication, errors, retries, rate limits and headers.
 - SDK: https://docs.wpanchorbay.com/accessbay/developers/sdk/
   Add AccessBay licensing to your own WordPress plugin with the SDK. Install it, prefix it, configure it, test it and release it.
+- Activations: https://docs.wpanchorbay.com/accessbay/guide/activations/
+  The Activations screen, what each column means, and how to deactivate a site.
 - Email setup: https://docs.wpanchorbay.com/accessbay/guide/email/
   How AccessBay sends email, how to add email providers, what happens when one fails, and what the email logs keep.
+- Finding things: search and filters: https://docs.wpanchorbay.com/accessbay/guide/finding-things/
+  How to use AccessBay's search dialog, the filter row on list screens, saved views, and shareable links.
 - Health checks: https://docs.wpanchorbay.com/accessbay/guide/health-checks/
-  What AccessBay checks about its own server, where to see the results, and how to point an uptime monitor at it.
+  What AccessBay checks about its own server, how to read the Health screen, what each message means and how to fix it, and how to point an uptime monitor at it.
 - Installation: https://docs.wpanchorbay.com/accessbay/guide/installation/
   Install and activate AccessBay, what activation sets up, and what deactivating or deleting it removes.
 - Introduction: https://docs.wpanchorbay.com/accessbay/guide/introduction/
-  What AccessBay is, who it is for, and what works in the current pre-release.
+  What AccessBay is, who it is for, what it does today, and a tour of its screens.
 - Known limits: https://docs.wpanchorbay.com/accessbay/guide/known-limits/
   What this release of AccessBay leaves out, and how updating from one release to the next is meant to work.
 - Licence: https://docs.wpanchorbay.com/accessbay/guide/licence/
   The licences AccessBay and its client SDK are released under, what they mean for plugins you build with the SDK, and how to get the source.
+- Licences: https://docs.wpanchorbay.com/accessbay/guide/licences/
+  The Licences screen, what each column and status means, and how to filter licences.
+- Orders: https://docs.wpanchorbay.com/accessbay/guide/orders/
+  The Orders screen, what each column and status means, and how to filter orders.
 - Plugin settings: https://docs.wpanchorbay.com/accessbay/guide/plugin-settings/
-  Show AccessBay in the admin bar, choose whether deleting the plugin deletes its data, and erase all AccessBay data while keeping the plugin.
+  How the Settings screen works, what every setting does, how to show AccessBay in the admin bar, and how to erase all AccessBay data.
+- Products: https://docs.wpanchorbay.com/accessbay/guide/products/
+  The Products screen, its columns and filters, and what the Draft, Active and Archived statuses mean.
 - Brevo: https://docs.wpanchorbay.com/accessbay/guide/providers/brevo/
   How to connect Brevo (formerly Sendinblue) to AccessBay - authenticate a domain, create an API key, fill in the form and set up delivery events.
 - Mailgun: https://docs.wpanchorbay.com/accessbay/guide/providers/mailgun/
