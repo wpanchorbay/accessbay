@@ -1,0 +1,37 @@
+# AccessBay Documentation
+
+Canonical: https://docs.wpanchorbay.com/accessbay/
+Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
+
+## Docs Index
+
+- AccessBay documentation: https://docs.wpanchorbay.com/accessbay/
+  Guides and reference for AccessBay, the self-hosted WordPress store for software licences and digital goods.
+- Extension points: https://docs.wpanchorbay.com/accessbay/developers/extension-points/
+  How other plugins can extend AccessBay, today and later.
+- Hooks: https://docs.wpanchorbay.com/accessbay/developers/hooks/
+  AccessBay's public actions and filters.
+- Network calls: https://docs.wpanchorbay.com/accessbay/developers/network-calls/
+  Every request AccessBay and the AccessBay SDK make over the network, when they make it, and what each one sends.
+- REST conventions: https://docs.wpanchorbay.com/accessbay/developers/rest-conventions/
+  The rules every AccessBay REST route follows, including authentication, errors, retries, rate limits and headers.
+- SDK: https://docs.wpanchorbay.com/accessbay/developers/sdk/
+  Add AccessBay licensing to your own WordPress plugin with the SDK. Install it, prefix it, configure it, test it and release it.
+- Email setup: https://docs.wpanchorbay.com/accessbay/guide/email/
+  How AccessBay sends email, how to add email providers, what happens when one fails, and what the email logs keep.
+- Health checks: https://docs.wpanchorbay.com/accessbay/guide/health-checks/
+  What AccessBay checks about its own server, where to see the results, and how to point an uptime monitor at it.
+- Installation: https://docs.wpanchorbay.com/accessbay/guide/installation/
+  Install and activate AccessBay, what activation sets up, and what deactivating or deleting it removes.
+- Introduction: https://docs.wpanchorbay.com/accessbay/guide/introduction/
+  What AccessBay is, who it is for, and what works in the current pre-release.
+- Known limits: https://docs.wpanchorbay.com/accessbay/guide/known-limits/
+  What this release of AccessBay leaves out, and how updating from one release to the next is meant to work.
+- Licence: https://docs.wpanchorbay.com/accessbay/guide/licence/
+  The licences AccessBay and its client SDK are released under, what they mean for plugins you build with the SDK, and how to get the source.
+- Plugin settings: https://docs.wpanchorbay.com/accessbay/guide/plugin-settings/
+  Show AccessBay in the admin bar, choose whether deleting the plugin deletes its data, and erase all AccessBay data while keeping the plugin.
+- Requirements: https://docs.wpanchorbay.com/accessbay/guide/requirements/
+  The WordPress, PHP and database versions AccessBay needs, and the PHP extensions it checks for.
+- The secret key: https://docs.wpanchorbay.com/accessbay/guide/secret-key/
+  Set ACCESSBAY_SECRET before going live, what happens without it, and how to change it safely.

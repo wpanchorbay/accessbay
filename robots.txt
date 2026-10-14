@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.wpanchorbay.com/accessbay/sitemap-index.xml
+
+# LLM-friendly content endpoints:
+# https://docs.wpanchorbay.com/accessbay/llms.txt
+# https://docs.wpanchorbay.com/accessbay/llms-full.txt
