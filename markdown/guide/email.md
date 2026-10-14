@@ -174,7 +174,7 @@ row matches when it has any ticked value. **Clear filters** appears when any fil
   subject, time, result and any error.
 
 Use **Load more** under the table to see older rows. These filters are not part of the page address and you can't
-save them as views, unlike the lists on other screens ([Finding things](/guide/finding-things/)).
+save them as views, unlike the lists on other screens ([Search and filters](/guide/finding-things/)).
 
 ### Retention
 

@@ -4,15 +4,167 @@ Canonical: https://docs.wpanchorbay.com/accessbay/
 
 This file contains the main public documentation content in a machine-readable text format.
 
-## AccessBay documentation
+## AccessBay: sell software from your own WordPress site
 URL: https://docs.wpanchorbay.com/accessbay/
-Description: Guides and reference for AccessBay, the self-hosted WordPress store for software licences and digital goods.
+Description: Sell plugins, themes and software from your own WordPress site. AccessBay issues licences, delivers updates to paying customers only, and keeps the customer relationship yours.
 
 import Card from '../../components/starlight/Card.astro';
-import { withBase } from '../../lib/links';
+import { LinkButton } from '@astrojs/starlight/components';
+import { withBase, EXTERNAL_LINKS } from '../../lib/links';
+import AskAi from '../../components/AskAi.astro';
 
-AccessBay is in development. These pages describe what works in the current pre-release and say plainly when
-something is coming in a later release.
+<AskAi />
+
+<ul class="trust-strip">
+	<li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>Free to start</span></li>
+	<li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>No marketplace commission</span></li>
+	<li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>Sell through WooCommerce</span></li>
+	<li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span>Updates for buyers only</span></li>
+</ul>
+
+<div class="about">
+
+## Sell your software. Skip the busywork.
+
+You build the product. AccessBay handles what happens after the sale. A customer pays, and their licence key is created and
+emailed. They refund, and the licence is taken back. Nobody has to touch it.
+
+You sell from your own site, so there is no marketplace in the middle. You keep your revenue, and you know exactly who your customers are.
+
+</div>
+
+## Built for people who sell software and digital products
+
+<div class="card-grid audience-grid">
+	<Card icon="code" variant="audience" title="Plugin and theme developers">
+		Every buyer gets a licence key and automatic updates. You ship your plugin and skip building a licensing system.
+	</Card>
+	<Card icon="briefcase" variant="audience" title="Agencies and freelancers">
+		Sell to clients from a site you control. See who bought what, and which sites are using it.
+	</Card>
+	<Card icon="shopping-cart" variant="audience" title="Store owners selling software">
+		Add licences and protected updates to the store you already run. Keep your products, prices and checkout.
+	</Card>
+	<Card icon="package" variant="audience" title="Software vendors">
+		Build licence checks and updates into your own plugin or theme, so buyers never leave it. The SDK is in beta.
+	</Card>
+	<Card icon="terminal" variant="audience" title="Teams with their own tools">
+		Hook AccessBay into the tools you already use. Each connection can do only what you allow.
+	</Card>
+	<Card icon="package" variant="audience" title="Resellers and agency partners">
+		Buy a block of licences once and hand them out to your own clients. Planned as a Pro feature; on the roadmap.
+	</Card>
+</div>
+
+## Why sellers choose AccessBay
+
+<div class="card-grid reason-grid">
+	<Card icon="house" variant="reason" title="Your customers stay yours">
+		Orders, emails and customer details live on your own site. No platform stands between you and your buyers.
+	</Card>
+	<Card icon="key-round" variant="reason" title="Licensing that just works">
+		Set how many sites each licence covers. Every sale gets a key, and every refund takes it back.
+	</Card>
+	<Card icon="plug" variant="reason" title="Keep your WooCommerce store">
+		A paid order creates the licence. A refund or dispute takes it back. Your store stays as it is.
+	</Card>
+	<Card icon="shield-check" variant="reason" title="Updates only buyers can get">
+		Only paying customers get your updates. Download links expire, so a shared link stops working.
+	</Card>
+	<Card icon="mail-check" variant="reason" title="Licence emails that arrive">
+		If one mail provider fails, the email goes out through another. You get an alert, so no buyer is left waiting.
+	</Card>
+	<Card icon="scale" variant="reason" title="Open source, nothing to hide">
+		AccessBay is free and open source under the GPL. You can read every line that runs on your site.
+	</Card>
+</div>
+
+## From paid order to happy customer
+
+<div class="steps">
+
+1. <strong>Add your product.</strong> Create the plugin, theme or software you sell. Set its prices and add each release.
+2. <strong>Sell it.</strong> Your customer pays through WooCommerce. Their licence key is created and sent straight away.
+3. <strong>Deliver and protect.</strong> Their site activates the key and gets updates. They see their licences, sites and downloads in a portal, without emailing you.
+
+</div>
+
+## Start free, grow with Pro
+
+<div class="plan-split">
+<div class="plan plan-free">
+<span class="plan-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m9 12 2 2 4-4" /></svg></span>
+
+Start selling today. Free gives you licences, updates, a customer portal and dependable licence emails. It is complete on
+its own.
+
+</div>
+<div class="plan plan-pro">
+<span class="plan-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></svg></span>
+
+Pro is planned for when you want more, such as subscriptions, offers and affiliates. The [roadmap](/roadmap/) shows
+what is here and what is coming.
+
+</div>
+</div>
+
+## Questions before you sell
+
+<details>
+<summary>Do I need WooCommerce?</summary>
+
+Today, yes. You take orders through WooCommerce. A checkout built into AccessBay is planned. The [roadmap](/roadmap/) tracks it.
+</details>
+
+<details>
+<summary>Can I sell through resellers or agencies?</summary>
+
+Not yet. It is planned as a Pro feature. A reseller or agency would buy a licence pool (a block of licences bought once), hand out licences to its own clients and get wholesale pricing. The [roadmap](/roadmap/) tracks it.
+</details>
+
+<details>
+<summary>Is the free plugin complete?</summary>
+
+Yes. Free covers licences, updates, the customer portal and licence emails. Pro is a planned extra for later features.
+</details>
+
+<details>
+<summary>Where does my data live?</summary>
+
+On your own WordPress site. Your customers, orders and licences stay with you, and no marketplace sits in between.
+</details>
+
+<details>
+<summary>What happens on a refund?</summary>
+
+The licence is taken back. When a WooCommerce order is refunded or disputed, AccessBay reverses the licence it created.
+</details>
+
+<details>
+<summary>Can I put licensing inside my own plugin?</summary>
+
+Yes. The SDK, currently in beta, adds licence checks, a licence screen and updates to your plugin or theme, so buyers never leave it.
+</details>
+
+<details>
+<summary>Can I connect my own tools?</summary>
+
+Yes. You can connect your own tools, and each one can do only what you allow.
+</details>
+
+<details>
+<summary>What if my email provider goes down?</summary>
+
+Licence emails switch to another provider, and AccessBay alerts you. Your buyers still get their keys.
+</details>
+
+<details>
+<summary>How do I install it?</summary>
+
+Follow the [installation guide](/guide/installation/). It also lists what your server needs.
+</details>
+
+## Explore the docs
 
 <div class="card-grid">
 	<Card title="User guide" icon="book-open" cta="Start here" href={withBase('guide/introduction/')}>
@@ -24,31 +176,54 @@ something is coming in a later release.
 	<Card title="API reference" icon="server" cta="Browse the routes" href={withBase('api/')}>
 		Every REST route, generated from the same registry the plugin uses.
 	</Card>
+	<Card title="Roadmap" icon="map" cta="See what's next" href={withBase('roadmap/')}>
+		What works today and where AccessBay is heading: your own shop, offers, campaigns and affiliates.
+	</Card>
 </div>
 
-## User guide
+<div class="cta-band">
+	<div class="actions">
+		<LinkButton href={withBase('guide/introduction/')} variant="primary" icon="right-caret">Get started</LinkButton>
+		<LinkButton href={EXTERNAL_LINKS.product} variant="minimal">AccessBay homepage</LinkButton>
+	</div>
+</div>
 
-For store owners and the people who run their sites: what AccessBay needs, how to install it, and how to keep it
-healthy.
+## Changelog
+URL: https://docs.wpanchorbay.com/accessbay/changelog/
+Description: What changed in each version of AccessBay and its SDK, newest first.
 
-- [Introduction](/guide/introduction/): what AccessBay is and what works today.
-- [Requirements](/guide/requirements/): WordPress, PHP and database versions.
-- [Installation](/guide/installation/): install, activate and remove the plugin.
-- [The secret key](/guide/secret-key/): the one setting you must make before going live.
-- [Health checks](/guide/health-checks/): how AccessBay watches itself, and how your monitor can watch it.
-- [Email setup](/guide/email/): how AccessBay sends email today.
+This page lists what changed in each release of AccessBay and the AccessBay SDK, newest first.
 
-## Developers
+## AccessBay 1.0.0
 
-For developers who integrate with AccessBay.
+First public release.
 
-- [REST conventions](/developers/rest-conventions/): authentication, errors, rate limits and headers.
-- [Hooks](/developers/hooks/), [extension points](/developers/extension-points/) and the [SDK](/developers/sdk/).
+- Licence keys, activations and seats, created from paid WooCommerce orders and reversed on refund or dispute.
+- Update delivery for the software you sell, with signed manifests and short-lived download links.
+- The AccessBay SDK as a versioned zip.
+- Admin screens for the home overview, products and prices, releases, licences, activations, customers, orders, the WooCommerce mapping, the email log, API keys, settings and health.
+- Email delivery through `wp_mail` by default, with optional SMTP, Brevo, Resend, Postmark, SMTP2GO, ZeptoMail, Mailgun and SendGrid providers. Failover between providers, and a log of every email and every site-wide `wp_mail` send.
+- A test email to any address through one provider, hourly checks of each provider and an optional daily test send. Alerts appear on the AccessBay screens and by email when a provider fails and when it recovers.
+- The licence key on the WooCommerce thank-you page and in email, and a customer portal with licences, sites and downloads.
+- WP-CLI commands and a REST API with scoped API keys.
+- One filter row on the Products, Orders, Licences and Activations screens, with search, filter menus that take several values at once, Clear filters, and saved views in a Views menu. These replace the status tabs. The email log tabs get filters too.
+- Search that also finds settings. Open the search dialog with the `/` key, and a result for a field opens its section and puts the cursor in the field.
+- The admin has no top bar on larger screens. Search sits under the logo and the theme toggle sits beside the Docs link. A screen inside another shows its parent as a dimmed link in front of the title, as in "Products > Add product".
+- Every health check explains its result in plain words. Warnings and critical results come with steps: links to the right admin page, and WP-CLI commands and `wp-config.php` lines you can copy. The Overall card counts and lists what needs attention.
+- Yes/no settings are full-width rows, and the "AccessBay in the admin bar" link appears or disappears as soon as you save.
+- The email provider picker shows the services as cards with their logos and puts WordPress (`wp_mail`) first, for sites where another SMTP plugin should send. The SendGrid provider is named Twilio SendGrid (API). SMTP2GO accepts an optional bearer token for its webhook.
+- The REST list routes that back these screens take several values for one filter, as an array or a comma-separated list. Values in one filter are alternatives, and different filters combine.
 
-## API reference
+## SDK 0.1.0-beta.1
 
-Every REST route, generated from the same registry the plugin uses: start with the
-[API overview](/api/).
+- The first versioned zip of the SDK, released with each AccessBay release. There is no public package registry: unpack the zip and use it through a Composer `path` repository.
+- A licence client to activate, deactivate and validate a key against your own AccessBay install. It accepts only answers signed by a public key you pinned.
+- An updater: WordPress offers a new version of your plugin from a signed release document, and the SDK checks the package's size and SHA-256 before it is installed.
+- A licence screen, a Site Health test, WP-CLI commands and an uninstaller, so a plugin does not need to write them.
+- On the licence screen, a "Licence" link on the plugin's row on the Plugins screen, and a "Receive beta updates" switch. A defined `{PREFIX}_CHANNEL` constant still wins and locks the switch.
+- The licence screen's title is your `page_title` message or else the plugin's own name.
+
+New versions are added here as they are released.
 
 ## Extension points
 URL: https://docs.wpanchorbay.com/accessbay/developers/extension-points/
@@ -788,7 +963,7 @@ Description: The Activations screen, what each column means, and how to deactiva
 
 Go to AccessBay > Activations to see the sites that use your licences. A site appears here when a customer enters a
 licence key in the plugin. Until then the screen says "No sites have activated yet". Search, filters, saved views and
-shareable links are described in [Finding things](/guide/finding-things/).
+shareable links are described in [Search and filters](/guide/finding-things/).
 
 ## Columns
 
@@ -989,7 +1164,7 @@ row matches when it has any ticked value. **Clear filters** appears when any fil
   subject, time, result and any error.
 
 Use **Load more** under the table to see older rows. These filters are not part of the page address and you can't
-save them as views, unlike the lists on other screens ([Finding things](/guide/finding-things/)).
+save them as views, unlike the lists on other screens ([Search and filters](/guide/finding-things/)).
 
 ### Retention
 
@@ -1004,7 +1179,7 @@ the mail log entries, attempts, provider events, site-mail log entries and suppr
 The eraser deletes emails that were never sent and replaces the address in the rest with a placeholder. It keeps
 ids, status and timing. A suppressed address stays suppressed.
 
-## Finding things: search and filters
+## Search and filters
 URL: https://docs.wpanchorbay.com/accessbay/guide/finding-things/
 Description: How to use AccessBay's search dialog, the filter row on list screens, saved views, and shareable links.
 
@@ -1517,7 +1692,7 @@ From top to bottom, the sidebar has:
 
 - The AccessBay logo. A "Test mode" tag sits next to it while the plugin is in test mode.
 - A **Search** box. Select it, or press `/`, to search licences, customers, orders, products and settings
-  ([Finding things](/guide/finding-things/)).
+  ([Search and filters](/guide/finding-things/)).
 - The screens, with the Dashboard first and then four groups: **Sales** (Products, Orders, Customers, Woo mapping),
   **Licensing** (Licences, Activations, API keys), **Email** (Email providers, Email settings, Email log) and
   **System** (Health, API test console, Settings). Add-ons, such as AccessBay Pro, can add items of their own, under
@@ -1545,7 +1720,7 @@ in view when you scroll, just under the WordPress admin bar.
 | [Settings](/guide/plugin-settings/) | Change how AccessBay behaves, and add email providers ([Email setup](/guide/email/)). |
 | [Health](/guide/health-checks/) | See what AccessBay verified about your site, and fix what it found. |
 
-The list screens share one layout, with a search box, filters and saved views. [Finding things](/guide/finding-things/)
+The list screens share one layout, with a search box, filters and saved views. [Search and filters](/guide/finding-things/)
 explains it once.
 
 ## Before you start
@@ -1632,7 +1807,7 @@ Description: The Licences screen, what each column and status means, and how to 
 
 Go to AccessBay > Licences to see the licences you have issued. AccessBay issues them automatically when an order is
 paid. Until the first one exists the screen says so. Search, filters, saved views and shareable links are described in
-[Finding things](/guide/finding-things/).
+[Search and filters](/guide/finding-things/).
 
 ## Columns
 
@@ -1669,7 +1844,7 @@ Description: The Orders screen, what each column and status means, and how to fi
 
 Go to AccessBay > Orders to see the orders AccessBay knows about. The list is read-only and shows the newest order
 first. Orders from WooCommerce and from checkout appear here as they are placed. Search, filters, saved views and
-shareable links are described in [Finding things](/guide/finding-things/).
+shareable links are described in [Search and filters](/guide/finding-things/).
 
 ## Columns
 
@@ -1812,7 +1987,7 @@ Description: The Products screen, its columns and filters, and what the Draft, A
 
 Go to AccessBay > Products to see everything you sell: plugins, downloads and bundles. The screen works like the other
 lists, so search, filters, saved views and shareable links are described in
-[Finding things](/guide/finding-things/). Select **Add product** to create one.
+[Search and filters](/guide/finding-things/). Select **Add product** to create one.
 
 Until you add the first product the screen says "No products yet". Add the first plugin, download or bundle you sell.
 
@@ -2595,4 +2770,119 @@ records answer `503` until you add that secret to `ACCESSBAY_SECRET_PREVIOUS`.
 
 AccessBay also signs some of its answers so that client software can check they really came from your site.
 `wp accessbay keys show` prints the public half of that signing key. It doesn't change when you change the secret.
+
+## Roadmap
+URL: https://docs.wpanchorbay.com/accessbay/roadmap/
+Description: Where AccessBay stands today and where it is heading, from a WooCommerce licensing layer to a complete store for software and digital goods.
+
+import RoadmapStrip from '../../components/RoadmapStrip.astro';
+import RoadmapItem from '../../components/RoadmapItem.astro';
+import Card from '../../components/starlight/Card.astro';
+import { EXTERNAL_LINKS } from '../../lib/links';
+
+AccessBay runs on WooCommerce today and grows into a full store for software and digital goods. Everything without a Pro tag is free, and the free plugin works fully on its own. Next, Then and Later show the order we plan to build in, without dates.
+
+<RoadmapStrip />
+
+## Sell
+
+<ul class="rm-list not-content">
+	<RoadmapItem name="WooCommerce" status="shipped">Paid orders create licences, and refunds and disputes reverse them.</RoadmapItem>
+	<RoadmapItem name="Standalone shop" status="then">Checkout, refunds, invoices and tax rates, with or without WooCommerce.</RoadmapItem>
+	<RoadmapItem name="Coupons" status="then">Discount codes built into the checkout.</RoadmapItem>
+	<RoadmapItem name="Offers" status="later" pro>Buy X get Y, tiered discounts, add-ons and follow-up deals.</RoadmapItem>
+</ul>
+
+## Deliver
+
+<ul class="rm-list not-content">
+	<RoadmapItem name="Licensing" status="shipped">Keys, activations and seats for every sale.</RoadmapItem>
+	<RoadmapItem name="Updates" status="shipped">One-click updates in wp-admin, through download links that expire.</RoadmapItem>
+	<RoadmapItem name="Customer portal" status="shipped">Buyers see their licences, sites and downloads without asking you.</RoadmapItem>
+	<RoadmapItem name="Email delivery" status="shipped">Licence emails still arrive if one mail provider fails.</RoadmapItem>
+	<RoadmapItem name="SDK" status="beta">Licensing and updates inside your own plugin or theme.</RoadmapItem>
+	<RoadmapItem name="Digital goods" status="next">Protected files with download limits, and refunds that stop access.</RoadmapItem>
+</ul>
+
+## Renew
+
+<ul class="rm-list not-content">
+	<RoadmapItem name="Renewals" status="next">Expiry reminders and a renewal link that extends the same licence.</RoadmapItem>
+	<RoadmapItem name="Subscriptions" status="then" pro>Recurring billing with retries, upgrades and seat changes.</RoadmapItem>
+</ul>
+
+## Grow
+
+<ul class="rm-list not-content">
+	<RoadmapItem name="Automated campaigns" status="later" pro>Email sequences that run on their own, including abandoned carts.</RoadmapItem>
+	<RoadmapItem name="Affiliates" status="later" pro>Referral links, commissions on renewals and payouts.</RoadmapItem>
+	<RoadmapItem name="Resellers and agencies" status="later" pro>Sell licence pools to resellers and agencies, who issue licences to their own clients.</RoadmapItem>
+</ul>
+
+## Run
+
+<ul class="rm-list not-content">
+	<RoadmapItem name="Admin" status="shipped">Products, orders, licences and health in one place, with search and saved views.</RoadmapItem>
+	<RoadmapItem name="REST API and WP-CLI" status="shipped">Connect your own tools with keys limited to what they need.</RoadmapItem>
+	<RoadmapItem name="Setup wizard" status="next">A guided first run that gets a new store ready to sell.</RoadmapItem>
+	<RoadmapItem name="EU VAT and invoices" status="later" pro>VAT tools, PDF invoices and credit notes.</RoadmapItem>
+	<RoadmapItem name="Webhooks and reports" status="later" pro>Outbound webhooks, recurring revenue and cohort reports.</RoadmapItem>
+	<RoadmapItem name="White-label" status="later" pro>Your branding in place of ours.</RoadmapItem>
+</ul>
+
+Also on our list: more payment gateways, connectors for other stores and licence transfer between customers. Plans change as we learn, and the [changelog](/changelog/) shows what has actually been released.
+
+<div class="card-grid">
+	<Card title="Missing something?" icon="message-square-plus" cta="Tell us" href={EXTERNAL_LINKS.requestFeature}>
+		Request a feature or share your opinion. What you tell us helps decide what comes next.
+	</Card>
+</div>
+
+## Trademarks
+URL: https://docs.wpanchorbay.com/accessbay/trademarks/
+Description: Trademark and copyright notice for the AccessBay documentation, covering whose names, logos and icons appear here and on what terms.
+
+This documentation shows the names, logos and icons of companies, products and platforms. All of them are trademarks or registered trademarks of their respective owners, and every right in them stays with those owners.
+
+They appear here for identification and reference only: to say which service a feature works with, or which assistant a page can be opened in. Their use does not imply any affiliation with, endorsement by, or sponsorship from the owners, and nothing here claims otherwise.
+
+## Where the marks come from
+
+Brand icons are taken from [Simple Icons](https://simpleicons.org/), a public collection of brand marks, with two exceptions: the OpenAI icon is from [Font Awesome Free](https://fontawesome.com/) (CC BY 4.0), and the Grok icon is the mark supplied by the site owner. Being listed in a collection does not change who owns a mark.
+
+## What WPAnchorBay owns
+
+WPAnchorBay owns the plugins documented on this site, which today is AccessBay, and everything that identifies them:
+
+- The names AccessBay and WPAnchorBay.
+- The logos, icons and wordmarks of the plugins and of WPAnchorBay.
+- The content of this documentation: the text, screenshots, diagrams and other images, which are copyright &copy; WPAnchorBay.
+
+AccessBay is free software under the GPL, but that licence covers the plugin's code and not the names, logos, icons, wordmarks or documentation content above. You may not use them, or copy or republish the documentation, without written permission. To ask, write to [support@wpanchorbay.com](mailto:support@wpanchorbay.com).
+
+## Marks used in this documentation
+
+The lists below name the owners of the marks currently used, so you can see what is shown and credit it correctly. They are not a complete roll, and there could be more: a mark can appear in a page or a screenshot without being listed here. The same notice covers every one of them.
+
+### AI assistants
+
+Shown as icons on the home page and named in the page tools menu. Each one opens the assistant with a short prompt that links to this documentation.
+
+- ChatGPT and OpenAI
+- Claude and Anthropic
+- Perplexity
+- Grok and xAI
+
+### Platforms and services
+
+Named where AccessBay works with them or where a guide explains how to connect them.
+
+- WordPress and the WordPress logo are trademarks of the WordPress Foundation. WooCommerce is a trademark of Automattic Inc. AccessBay is independent software and is not endorsed by, or affiliated with, either of them.
+- Brevo (formerly Sendinblue), Mailgun, Postmark, Resend, SendGrid, SMTP2GO and ZeptoMail, the mail services the email guides cover.
+- Google Workspace, Gmail and Microsoft 365, named in the SMTP guide.
+- GitHub, Composer and Packagist, named in the developer guides.
+
+## Questions
+
+If you own a mark shown here and want it credited differently or removed, write to [support@wpanchorbay.com](mailto:support@wpanchorbay.com).
 

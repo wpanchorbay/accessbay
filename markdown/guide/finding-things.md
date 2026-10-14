@@ -1,5 +1,5 @@
 ---
-title: "Finding things: search and filters"
+title: "Search and filters"
 description: "How to use AccessBay's search dialog, the filter row on list screens, saved views, and shareable links."
 ---
 AccessBay has two ways to find something. The search dialog looks across the whole plugin. The filter row narrows the

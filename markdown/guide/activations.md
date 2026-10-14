@@ -4,7 +4,7 @@ description: "The Activations screen, what each column means, and how to deactiv
 ---
 Go to AccessBay > Activations to see the sites that use your licences. A site appears here when a customer enters a
 licence key in the plugin. Until then the screen says "No sites have activated yet". Search, filters, saved views and
-shareable links are described in [Finding things](/guide/finding-things/).
+shareable links are described in [Search and filters](/guide/finding-things/).
 
 ## Columns
 

@@ -4,7 +4,7 @@ description: "The Licences screen, what each column and status means, and how to
 ---
 Go to AccessBay > Licences to see the licences you have issued. AccessBay issues them automatically when an order is
 paid. Until the first one exists the screen says so. Search, filters, saved views and shareable links are described in
-[Finding things](/guide/finding-things/).
+[Search and filters](/guide/finding-things/).
 
 ## Columns
 

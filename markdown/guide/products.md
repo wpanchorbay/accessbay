@@ -4,7 +4,7 @@ description: "The Products screen, its columns and filters, and what the Draft, 
 ---
 Go to AccessBay > Products to see everything you sell: plugins, downloads and bundles. The screen works like the other
 lists, so search, filters, saved views and shareable links are described in
-[Finding things](/guide/finding-things/). Select **Add product** to create one.
+[Search and filters](/guide/finding-things/). Select **Add product** to create one.
 
 Until you add the first product the screen says "No products yet". Add the first plugin, download or bundle you sell.
 

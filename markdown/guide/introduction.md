@@ -25,7 +25,7 @@ From top to bottom, the sidebar has:
 
 - The AccessBay logo. A "Test mode" tag sits next to it while the plugin is in test mode.
 - A **Search** box. Select it, or press `/`, to search licences, customers, orders, products and settings
-  ([Finding things](/guide/finding-things/)).
+  ([Search and filters](/guide/finding-things/)).
 - The screens, with the Dashboard first and then four groups: **Sales** (Products, Orders, Customers, Woo mapping),
   **Licensing** (Licences, Activations, API keys), **Email** (Email providers, Email settings, Email log) and
   **System** (Health, API test console, Settings). Add-ons, such as AccessBay Pro, can add items of their own, under
@@ -53,7 +53,7 @@ in view when you scroll, just under the WordPress admin bar.
 | [Settings](/guide/plugin-settings/) | Change how AccessBay behaves, and add email providers ([Email setup](/guide/email/)). |
 | [Health](/guide/health-checks/) | See what AccessBay verified about your site, and fix what it found. |
 
-The list screens share one layout, with a search box, filters and saved views. [Finding things](/guide/finding-things/)
+The list screens share one layout, with a search box, filters and saved views. [Search and filters](/guide/finding-things/)
 explains it once.
 
 ## Before you start

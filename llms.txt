@@ -5,8 +5,10 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
 
 ## Docs Index
 
-- AccessBay documentation: https://docs.wpanchorbay.com/accessbay/
-  Guides and reference for AccessBay, the self-hosted WordPress store for software licences and digital goods.
+- AccessBay: sell software from your own WordPress site: https://docs.wpanchorbay.com/accessbay/
+  Sell plugins, themes and software from your own WordPress site. AccessBay issues licences, delivers updates to paying customers only, and keeps the customer relationship yours.
+- Changelog: https://docs.wpanchorbay.com/accessbay/changelog/
+  What changed in each version of AccessBay and its SDK, newest first.
 - Extension points: https://docs.wpanchorbay.com/accessbay/developers/extension-points/
   How other plugins can extend AccessBay, today and later.
 - Hooks: https://docs.wpanchorbay.com/accessbay/developers/hooks/
@@ -21,7 +23,7 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
   The Activations screen, what each column means, and how to deactivate a site.
 - Email setup: https://docs.wpanchorbay.com/accessbay/guide/email/
   How AccessBay sends email, how to add email providers, what happens when one fails, and what the email logs keep.
-- Finding things: search and filters: https://docs.wpanchorbay.com/accessbay/guide/finding-things/
+- Search and filters: https://docs.wpanchorbay.com/accessbay/guide/finding-things/
   How to use AccessBay's search dialog, the filter row on list screens, saved views, and shareable links.
 - Health checks: https://docs.wpanchorbay.com/accessbay/guide/health-checks/
   What AccessBay checks about its own server, how to read the Health screen, what each message means and how to fix it, and how to point an uptime monitor at it.
@@ -65,3 +67,7 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
   The WordPress, PHP and database versions AccessBay needs, and the PHP extensions it checks for.
 - The secret key: https://docs.wpanchorbay.com/accessbay/guide/secret-key/
   Set ACCESSBAY_SECRET before going live, what happens without it, and how to change it safely.
+- Roadmap: https://docs.wpanchorbay.com/accessbay/roadmap/
+  Where AccessBay stands today and where it is heading, from a WooCommerce licensing layer to a complete store for software and digital goods.
+- Trademarks: https://docs.wpanchorbay.com/accessbay/trademarks/
+  Trademark and copyright notice for the AccessBay documentation, covering whose names, logos and icons appear here and on what terms.

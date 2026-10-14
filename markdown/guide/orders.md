@@ -4,7 +4,7 @@ description: "The Orders screen, what each column and status means, and how to f
 ---
 Go to AccessBay > Orders to see the orders AccessBay knows about. The list is read-only and shows the newest order
 first. Orders from WooCommerce and from checkout appear here as they are placed. Search, filters, saved views and
-shareable links are described in [Finding things](/guide/finding-things/).
+shareable links are described in [Search and filters](/guide/finding-things/).
 
 ## Columns
 
