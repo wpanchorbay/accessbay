@@ -19,6 +19,8 @@ Full text: https://docs.wpanchorbay.com/accessbay/llms-full.txt
   The rules every AccessBay REST route follows, including authentication, errors, retries, rate limits and headers.
 - SDK: https://docs.wpanchorbay.com/accessbay/developers/sdk/
   Add AccessBay licensing to your own WordPress plugin with the SDK. Install it, prefix it, configure it, test it and release it.
+- Features and use cases: https://docs.wpanchorbay.com/accessbay/features/
+  Everything AccessBay does today, grouped by what you do with it, and the kinds of software business it fits.
 - Activations: https://docs.wpanchorbay.com/accessbay/guide/activations/
   The Activations screen, what each column means, and how to deactivate a site.
 - Email setup: https://docs.wpanchorbay.com/accessbay/guide/email/
