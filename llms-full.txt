@@ -89,6 +89,18 @@ You sell from your own site, so there is no marketplace in the middle. You keep 
 
 </div>
 
+## What you can do today
+
+Sell a plugin or theme with a yearly licence, limit and manage the sites each key covers, keep updates for paying buyers
+only, and keep selling when an email provider fails. The features and use cases page lists everything that works in the
+current release.
+
+<div class="section-cta">
+	<div class="actions">
+		<LinkButton href={withBase('features/')} variant="primary" icon="right-caret">See details</LinkButton>
+	</div>
+</div>
+
 ## Start free, grow with Pro
 
 <div class="plan-split">
