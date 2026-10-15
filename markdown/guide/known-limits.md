@@ -12,7 +12,7 @@ AccessBay is a pre-release. This page lists what the current release leaves out,
 
 ## Setting up products from the command line
 
-You normally manage products and prices on their admin screens ([Products](/guide/products/)). WP-CLI can create them too, which is handy for scripts and for seeding a test site. Each command prints a table or, with `--format=json`, JSON; `--format=ids` prints only the new id, for scripts. A refused input exits with status 1 and prints the reason code, such as `duplicate_slug`. All of them work in every mode, live included.
+You normally manage products and prices on their admin screens ([Products](/guide/products/)). WP-CLI can create them too, which is handy for scripts and for seeding a test site. A create command (`products create`, `prices add`, `customers create-guest`) prints a `Success:` line; `--format=json` prints `{"id":N}` instead and `--format=ids` prints only the new id, for scripts. The `list` and `get` commands print a table, or JSON with `--format=json`. A refused input exits with status 1 and prints the reason code, such as `duplicate_slug`. All of them work in every mode, live included.
 
 | Command | What it does |
 | --- | --- |
