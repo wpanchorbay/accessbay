@@ -6,13 +6,14 @@ description: "Every request AccessBay and the AccessBay SDK make over the networ
 nothing is sent to any server run by the people who built AccessBay. This page lists every HTTP request the code
 makes in this release, so you can check that for yourself and copy the list into your own privacy text.
 
-There are six kinds of request:
+There are seven kinds of request:
 
 | Who sends it | Where it goes | Why |
 |---|---|---|
 | The SDK inside a vendor's plugin | The vendor's own AccessBay install, at the `server_url` the vendor configured | Activate, check and deactivate a licence, and ask for an update package |
 | The SDK's updater inside a vendor's plugin | The host in the plugin's `Update URI` header (or the `meta_url` the vendor configured), and the address the install returns for a package | Read the release information and download an update |
 | The AccessBay plugin | The same WordPress site it runs on | Health checks |
+| The AccessBay plugin | The product's update host, only when it is the same WordPress site, and only after `wp accessbay releases publish` | Check that `/meta/{slug}/{version}.json` serves the metadata just published |
 | Action Scheduler, a library bundled in the AccessBay plugin | The same WordPress site it runs on | Start the background job runner |
 | The AccessBay plugin | `www.cloudflare.com`, only when an administrator runs a command | Refresh the list of Cloudflare's address ranges |
 | The AccessBay plugin | The email provider an administrator added under Settings, Email providers | Send email, check the provider's credentials, send test emails |
@@ -84,6 +85,15 @@ doesn't send its requests when the site's name points at a private address, and 
 
 Each check is due once a day. A due check runs at the end of an administrator's request, a WP-Cron request or a WP-CLI
 command, or after a visitor's response has already gone out. `wp accessbay health` runs every check now.
+
+## The update metadata check
+
+After `wp accessbay releases publish` publishes a release, AccessBay sends one `GET` request to
+`https://{update host}/meta/{product slug}/{version}.json` and compares the answer with the metadata it just stored.
+The update host is the product's Update URI host, or else the site's own host. The request only reaches the site's own
+scheme, host and port, follows no redirect, waits 5 seconds at most and reads at most 64 KB. It sends the header
+`Accept: application/json` and no body. If the update host is any other host, nothing is sent and the command warns
+that the check was not verified. Nothing else starts this request.
 
 ## The background job runner
 
